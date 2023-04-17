@@ -9,7 +9,7 @@ public class Main {
         System.out.println("Por favor insira seu nome");
         String nomeCliente = scanner.nextLine();
         System.out.println("Por favor insira seu saldo");
-        double saldoCliente = scanner.nextInt();
+        double saldoCliente = scanner.nextDouble();
 
         System.out.println("***********************");
         System.out.println("Dados iniciais do cliente:");
@@ -33,16 +33,16 @@ public class Main {
             int operacao = scanner.nextInt();
 
             switch (operacao) {
-                case 1: {
+                case 1:
                     System.out.println("O saldo atual é de: R$ " + saldoCliente);
-                } break;
-                case 2: {
+                break;
+                case 2:
                     System.out.println("Informe o valor a receber: ");
                     double recebeValor = scanner.nextDouble();
                     System.out.println("Saldo atualizado: R$ " + (saldoCliente + recebeValor));
                     saldoCliente += recebeValor;
-                }break;
-                case 3: {
+                break;
+                case 3:
                     System.out.println("Informe o valor a transferir: ");
                     double transfereValor = scanner.nextDouble();
                         if (transfereValor > saldoCliente) {
@@ -51,14 +51,14 @@ public class Main {
                             System.out.println("Saldo atualizado: R$ " + (saldoCliente - transfereValor));
                             saldoCliente -= transfereValor;
                         }
-                }break;
-                case 4: {
+                break;
+                case 4:
                     System.out.println("Obrigado por ser nosso cliente");
                     fimOperacao = 2;
-                }break;
-                default: {
+                break;
+                default:
                     System.out.println("Operação inválida");
-                }
+
             }
         }
     }
